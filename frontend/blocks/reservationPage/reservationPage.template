@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="/blocks/reservationPage/reservationPage.css"/>
+<section class="reservation-page">
+
+    <div class="reservation-page__header">
+        <div class="reservation-page__title">
+            <div class="reservation-page__logo">
+                <img src="/assets/img/diamondIcon.svg" class="reservation-page__logo-diamond"/>
+                <div class="reservation-page__logo-line"></div>
+            </div>
+            
+            <h1 class="reservation-page__title-content">reservation</h1>
+
+            <div class="reservation-page__logo">
+                <div class="reservation-page__logo-line"></div>
+                <img src="/assets/img/diamondIcon.svg" class="reservation-page__logo-diamond"/>
+            </div>
+        </div>
+
+        <div class="reservation-page__subtitle">
+            Secure your spot at Qitchen, where exceptional sushi and a remarkable dining experience await.
+        </div>
+    </div>
+
+
+    <form action="" class="reservation-page__form">
+
+
+        <div class="reservation-page__form-without-session">
+            <div class="reservation-page__group-form">
+                <input type="text" class="reservation-page__input" placeholder="Name" name="name" autocomplete="off"/>
+                <div class="reservation-page__input-content-error" id="name-error"></div>
+            </div>
+
+            <div class="reservation-page__group-form">
+                <input type="text" class="reservation-page__input" placeholder="Phone number" name="phone" autocomplete="off"/>
+                <div class="reservation-page__input-content-error" id="phone-error"></div>
+            </div>
+
+            <div class="reservation-page__group-form">
+                <input type="text" class="reservation-page__input" placeholder="Email" name="email" autocomplete="off"/>
+                <div class="reservation-page__input-content-error" id="email-error"></div>
+            </div>
+        </div>
+        
+        <div class="reservation-page__form-with-session">
+            <div class="reservation-page__group-form reservation-page__group-form--horizontal">
+                <input type="number" class="reservation-page__input" placeholder="Guests" name="guests" autocomplete="off" min="1" max="10"/>
+                <div class="reservation-page__input-content-error" id="guests-error"></div>
+            </div>
+
+            <div class="reservation-page__group-form reservation-page__group-form--horizontal">
+                <input type="date" class="reservation-page__input" placeholder="Date" name="date" autocomplete="off"/>
+                <div class="reservation-page__input-content-error" id="date-error"></div>
+            </div>
+
+            <div class="reservation-page__group-form reservation-page__group-form--horizontal">
+                <input type="time" class="reservation-page__input" placeholder="Time" name="time" autocomplete="off"/>
+                <div class="reservation-page__input-content-error" id="time-error"></div>
+            </div>
+        </div>
+        
+
+        <div class="reservation-page__form-error reservation-page__input-content-error" id="form-error"></div>
+        <form-button data-title="Reserve" class="reservation-page__button"></form-button>
+    </form>
+    
+</section>
+

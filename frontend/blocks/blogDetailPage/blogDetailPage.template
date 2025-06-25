@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="/blocks/blogDetailPage/blogDetailPage.css"/>
+
+<section class="blog-detail-page">
+    <div class="blog-detail-page__header">
+        <div class="blog-detail-page__header-date">
+            <div class="blog-detail-page__date-logo">
+                <img src="/assets/img/diamondIcon.svg" alt="diamond" class="blog-detail-page__logo-diamond">
+                <div class="blog-detail-page__logo-line"></div>
+            </div>
+
+            <p class="blog-detail-page__date-content">
+                24th Aug 2023
+            </p>
+
+            <div class="blog-detail-page__date-logo">
+                <div class="blog-detail-page__logo-line"></div>
+                <img src="/assets/img/diamondIcon.svg" alt="diamond" class="blog-detail-page__logo-diamond">
+            </div>
+        </div>
+
+        <h1 class="blog-detail-page__header-title">
+            How Qitchen Redefines Flavor Harmony in Every Bite
+        </h1>
+
+
+        <div class="blog-detail-page__logo">
+            <img src="/assets/img/diamondIcon.svg" alt="diamond" class="blog-detail-page__logo-diamond">
+            <div class="blog-detail-page__logo-line"></div>
+            <img src="/assets/img/diamondIcon.svg" alt="diamond" class="blog-detail-page__logo-diamond">
+        </div>
+    </div>
+
+    <div class="blog-detail-page__description">
+        
+
+        <div class="blog-detail-page__description-preview">
+            In a world where dining experiences often blend into the ordinary, Qitchen stands as an emblem of culinary passion redefined. Beyond being a restaurant that serves sushi, Qitchen is an embodiment of dedication, creativity, and a profound love for the art of gastronomy. As you step through its doors, you're not merely entering an eatery; you're immersing yourself in an experience that goes beyond the boundaries of a traditional dining encounter.
+        </div>
+
+        <textarea class="blog-detail-page__description-editable" hidden contenteditable>
+
+        </textarea>
+
+        <div class="blog-detail-page__description-author">
+            Author: Name
+        </div>
+
+        <form-button data-title="Save" data-disabled="" hidden></form-button>
+    </div>
+</section>

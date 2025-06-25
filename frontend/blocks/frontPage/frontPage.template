@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/blocks/frontPage/frontPage.css"/>
+<section class="front-page">
+    
+    <div class="front-page__item">
+        <img src="/assets/img/front-page-item.png" class="front-page__item-image"/>
+        <button class="front-page__item-button">
+            MENU
+            <badge-icon src="/assets/img/arrow-right-light.svg" width="16" height="16"></badge-icon>
+        </button>
+    </div>
+    <div class="front-page__item">
+        <img src="/assets/img/front-page-item2.png" class="front-page__item-image"/>
+        <button class="front-page__item-button">
+            RESERVATION
+            <badge-icon src="/assets/img/arrow-right-light.svg" width="16" height="16"></badge-icon>
+        </button>
+    </div>
+    <div class="front-page__item">
+        <img src="/assets/img/front-page-item3.png" class="front-page__item-image"/>
+        <button class="front-page__item-button">
+            OUR RESTAURANT
+            <badge-icon src="/assets/img/arrow-right-light.svg" width="16" height="16"></badge-icon>
+        </button>
+    </div>
+    
+    
+</section>

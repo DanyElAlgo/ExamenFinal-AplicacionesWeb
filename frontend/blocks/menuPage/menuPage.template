@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/blocks/menuPage/menuPage.css"/>
+
+<section class="menu-page">
+    <div class="menu-page__navbar">
+        <button-custom data-title="All" data-category-id="0" id="all-button"></button-custom>
+        <button-custom data-title="Maki" data-category-id="1"></button-custom>
+        <button-custom data-title="Uramaki" data-category-id="2"></button-custom>
+        <button-custom data-title="Special Rolls" data-category-id="3"></button-custom>
+    </div>
+    <div class="menu-page__content">
+
+        
+    </div>
+</section>
+
+<template id="menu-page__category-section-id">
+    <div class="menu-page__category-section">
+        <div class="menu-page__category-title">
+            <div class="menu-page__category-logo">
+                <img src="/assets/img/diamondIcon.svg" class="menu-page__logo-diamond"/>
+                <div class="menu-page__logo-line"></div>
+            </div>
+            
+            <h1 class="menu-page__category-title-content"></h1>
+
+            <div class="menu-page__category-logo">
+                <div class="menu-page__logo-line"></div>
+                <img src="/assets/img/diamondIcon.svg" class="menu-page__logo-diamond"/>
+            </div>
+            
+        </div>
+
+        <div class="menu-page__category__items">
+            
+        </div>
+    </div>
+</template>

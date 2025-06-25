@@ -1,0 +1,43 @@
+
+<link rel="stylesheet" href="/blocks/loginPage/loginPage.css">
+<section class="login-page">
+    <div class="login-page__title">
+
+        <div class="login-page__logo">
+            <img src="/assets/img/diamondIcon.svg" class="login-page__logo-diamond"/>
+            <div class="login-page__logo-line"></div>
+        </div>
+        
+        <h1 class="login-page__title-content">Login</h1>
+
+        <div class="login-page__logo">
+            <div class="login-page__logo-line"></div>
+            <img src="/assets/img/diamondIcon.svg" class="login-page__logo-diamond"/>
+        </div>
+
+
+    </div>
+
+
+    <form action="" class="login-page__form">
+
+        <div class="login-page__group-form">
+            <input type="text" class="login-page__input" placeholder="Email" name="email" autocomplete="off"/>
+            <div class="login-page__input-error login-page__input-error--email"></div>
+        </div>
+        
+
+        <div class="login-page__group-form">
+            <input type="password" class="login-page__input" placeholder="Password" name="password" autocomplete="off"/>
+            <div class="login-page__input-error login-page__input-error--password"></div>
+        </div>
+
+        <div class="login-page__form-error login-page__input-error"></div>
+
+        <form-button data-title="Login" class="login-page__button" data-state="disabled"></form-button>
+    </form>
+
+    <a class="login-page__link">
+        Go to registration instead
+    </a>
+</section>

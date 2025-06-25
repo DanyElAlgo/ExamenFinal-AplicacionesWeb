@@ -1,0 +1,22 @@
+.form-button {
+    width: 100%;
+    background-color: rgba(239, 231, 210, 1);
+    color: rgba(10, 11, 10, 1);
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    font-family: "Forum", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: rgba(255, 255, 255, 1);   
+}
+
+.form-button:disabled {
+    background-color: rgba(239, 231, 210, 0.4);
+    cursor:default;
+}

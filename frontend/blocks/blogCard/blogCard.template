@@ -1,0 +1,36 @@
+
+<link rel="stylesheet" href="/blocks/blogCard/blogCard.css"/>
+<div class="blog-card">
+
+    <div class="blog-card__image-wrapper">
+        <img src="/assets/img/blog1.png" alt="blog" class="blog-card__image" />
+        <div class="blog-card__like-button">
+            <img src="" alt="star" class="blog-card__logo-star"/> 
+        </div>
+    </div>
+
+    <div class="blog-card__content">
+        <div class="blog-card__date">
+            <div class="blog-card__logo">
+                <img src="/assets/img/diamondIcon.svg" alt="diamond" class="blog-card__diamond">
+                <div class="blog-card__logo-line"></div>
+            </div>
+            
+            <p class="blog-card__date-content">
+                24th Aug 2023
+            </p>
+        </div>
+
+        <h4 class="blog-card__title">
+            How Qitchen Redefines Flavor Harmony in Every Bite
+        </h4>
+
+        <p class="blog-card__description">
+            Experience an orchestra of tastes as Qitchen's sushi unveils a symphony of perfectly balanced flavors.
+        </p>
+
+        <p class="blog-card__author">
+            Author: Name
+        </p>
+    </div>
+</div>

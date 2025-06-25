@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/blocks/cartPage/cartPage.css">
+<section class="cart-page">
+    <div class="cart-page__content">
+        <div class="cart-page__title">
+
+            <div class="cart-page__category-logo">
+                <img src="/assets/img/diamondIcon.svg" class="cart-page__logo-diamond"/>
+                <div class="cart-page__logo-line"></div>
+            </div>
+            
+            <h1 class="cart-page__title-content">My cart</h1>
+
+            <div class="cart-page__category-logo">
+                <div class="cart-page__logo-line"></div>
+                <img src="/assets/img/diamondIcon.svg" class="cart-page__logo-diamond"/>
+            </div>
+
+
+        </div>
+
+        <div class="cart-page__information">
+
+        </div>
+    </div>
+    
+    <form-button data-title="Place order" class="cart-page__form-button"></form-button>
+</section>
+
+
+<template id="cart-page__total-template">
+    <div class="cart-page__total-info-main">
+        <div class="cart-page__total-skeleton">
+
+        </div>
+
+        <div class="cart-page__total-info">
+            <h5 class="cart-page__total_title">
+                Total
+            </h5>
+            <div class="cart-page__total-line"></div>
+            <h5 class="cart-page__total-price">
+
+            </h5>
+        </div>
+    </div>
+</template>

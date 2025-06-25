@@ -1,0 +1,90 @@
+@import url(/assets/fonts/satoshi/css/satoshi.css);
+
+.product-card {
+    display: flex;
+    gap: 1.5rem;
+    cursor: pointer;
+}
+
+.product-card__img-wrapper {
+    width: 150px;
+    height: 100px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.product-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+
+.product-card__header{
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+}
+
+.product-card__line {
+    height: 1px;
+    flex-grow: 1;
+    border-bottom: 1px dashed rgba(239, 231, 210, 0.15);
+    align-self: flex-end;
+    margin-bottom: 4px;
+}
+
+.product-card__title, .product-card__price {
+    color: rgba(239, 231, 210, 1);
+    font-family: "Forum", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.product-card__title {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+}
+
+.product-card__description {
+    color: rgba(245, 242, 234, 0.7);
+    font-family: var(--font-satoshi-light);
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+.product-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    justify-content: center;
+}
+
+.product-card__add-button {
+    background-color: rgba(239, 231, 210, 1);
+    display: flex;
+    position: absolute;
+    left: 11px;
+    bottom: 6px;
+    justify-content: center;
+    align-items: center;
+    padding: 4.17px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.product-card__add-button:hover .product-card__add-icon-fill {
+  fill: rgba(239, 231, 210, 1);
+}
+
+
+.product-card__add-button:hover {
+    background-color: rgba(13, 14, 14, 1);
+    border: 2px solid rgba(239, 231, 210, 1);
+}

@@ -1,0 +1,6 @@
+
+<link rel="stylesheet" href="/blocks/badge/badge.css"/>
+
+<div class="badge">
+    <img alt="icon" class="badge__icon" />
+</div>

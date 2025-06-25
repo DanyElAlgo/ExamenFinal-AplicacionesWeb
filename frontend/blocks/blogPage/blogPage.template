@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/blocks/blogPage/blogPage.css"/>
+
+<section class="blog-page">
+    <div class="blog-page__title">
+
+        <div class="blog-page__logo">
+            <img src="/assets/img/diamondIcon.svg" class="blog-page__logo-diamond"/>
+            <div class="blog-page__logo-line"></div>
+        </div>
+        
+        <h1 class="blog-page__title-content">Behind the scenes & latest news</h1>
+
+        <div class="blog-page__logo">
+            <div class="blog-page__logo-line"></div>
+            <img src="/assets/img/diamondIcon.svg" class="blog-page__logo-diamond"/>
+        </div>
+    </div>
+
+    <nav class="blog-page__nav">
+        <a class="blog-page__nav-item" tabindex="1" id="news">
+            All news
+        </a>
+
+        <a class="blog-page__nav-item" tabindex="2" id="favorites">
+            Favorites
+        </a>
+
+        <a class="blog-page__nav-item" tabindex="3" id="articles">
+            My articles
+        </a>
+    </nav>
+
+    <div class="blog-page__blogs">
+        
+    </div>
+</section>

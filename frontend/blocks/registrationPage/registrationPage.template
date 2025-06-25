@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="/blocks/registrationPage/registrationPage.css"/>
+
+<section class="registration-page">
+
+    <div class="registration-page__title">
+
+        <div class="registration-page__logo">
+            <img src="/assets/img/diamondIcon.svg" class="registration-page__logo-diamond"/>
+            <div class="registration-page__logo-line"></div>
+        </div>
+        
+        <h1 class="registration-page__title-content">Registration</h1>
+
+        <div class="registration-page__logo">
+            <div class="registration-page__logo-line"></div>
+            <img src="/assets/img/diamondIcon.svg" class="registration-page__logo-diamond"/>
+        </div>
+    </div>
+
+    <form action="" class="registration-page__form">
+        
+
+        <div class="registration-page__inputs">
+            <div class="registration-page__group-form">
+                <input type="text" class="registration-page__input" placeholder="Name" name="name" autocomplete="off"/>
+                <div class="registration-page__input-content-error" id="name-error"></div>
+            </div>
+
+            <div class="registration-page__group-form">
+                <input type="text" class="registration-page__input" placeholder="Phone Number" name="phone" autocomplete="off"/>
+                <div class="registration-page__input-content-error" id="phone-error"></div>
+            </div>
+
+            <div class="registration-page__group-form">
+                <input type="text" class="registration-page__input" placeholder="Email" name="email" autocomplete="off"/>
+                <div class="registration-page__input-content-error" id="email-error"></div>
+            </div>
+
+            <div class="registration-page__group-form">
+                <input type="text" class="registration-page__input" placeholder="Password" name="password" autocomplete="off"/>
+                <div class="registration-page__input-content-error" id="password-error"></div>
+            </div>
+
+            <div class="registration-page__group-form">
+                <input type="text" class="registration-page__input" placeholder="Confirm password" name="confirm-password" autocomplete="off"/>
+                <div class="registration-page__input-content-error" id="confirm-password-error"></div>
+            </div>
+
+            <div class="registration-page__group-form">
+                <input type="text" class="registration-page__input" placeholder="Address" name="address" autocomplete="off"/>
+                <div class="registration-page__input-content-error" id="address-error"></div>
+            </div>
+            
+            <div class="registration-page__form-error">
+            </div>
+        </div>
+        
+
+        <form-button data-title="Register" class="registration-page__button" data-state="disabled"></form-button>
+    </form>
+
+
+    <a class="registration-page__link">
+        Go to login instead
+    </a>
+
+</section>

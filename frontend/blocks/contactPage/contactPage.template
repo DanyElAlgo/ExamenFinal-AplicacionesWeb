@@ -1,0 +1,167 @@
+<link rel="stylesheet" href="/blocks/contactPage/contactPage.css"/>
+
+<section class="contact-page">
+
+    <div class="contact-page__first-section">
+        <div class="contact-page__opening">
+            <div class="contact-page__opening-title">
+                <div class="contact-page__title-logo">
+                    <img alt="diamond" src="/assets/img/diamondIcon.svg" class="contact-page__title-diamond"/>
+                    <div class="contact-page__title-line"></div>
+                </div>
+                
+                <h4 class="contact-page__title-content">
+                    Opening hours
+                </h4>
+
+                <div class="contact-page__title-logo">
+                    <div class="contact-page__title-line"></div>
+                    <img alt="diamond" src="/assets/img/diamondIcon.svg" class="contact-page__title-diamond"/>
+                </div>
+            </div>
+
+            <div class="contact-page__opening-hours">
+                <div class="contact-page__hour-item">
+                    <p class="contact-page__day">
+                        Monday
+                    </p>
+
+                    <div class="contact-page__hour-line"></div>
+
+                    <p class="contact-page__hour-info">
+                        16:00 - 22:30
+                    </p>
+                </div>
+
+                <div class="contact-page__hour-item">
+                    <p class="contact-page__day">
+                        Wednesday
+                    </p>
+
+                    <div class="contact-page__hour-line"></div>
+
+                    <p class="contact-page__hour-info">
+                        16:00 - 22:30
+                    </p>
+                </div>
+
+                <div class="contact-page__hour-item">
+                    <p class="contact-page__day">
+                        Thursday
+                    </p>
+
+                    <div class="contact-page__hour-line"></div>
+
+                    <p class="contact-page__hour-info">
+                        16:00 - 22:30
+                    </p>
+                </div>
+
+                <div class="contact-page__hour-item">
+                    <p class="contact-page__day">
+                        Friday
+                    </p>
+
+                    <div class="contact-page__hour-line"></div>
+
+                    <p class="contact-page__hour-info">
+                        16:00 - 22:30
+                    </p>
+                </div>
+
+
+                <div class="contact-page__hour-item">
+                    <p class="contact-page__day">
+                        Saturday & Sunday
+                    </p>
+
+                    <div class="contact-page__hour-line"></div>
+
+                    <p class="contact-page__hour-info">
+                        16:00 - 22:30
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-page__images">
+            <div class="contact-page__images-first-section">
+                <div class="contact-page__image-wrapper">
+                    <img src="/assets/img/image-instagram.png" alt="Social Image" class="contact-page__image-social">
+                </div>
+
+                <div class="contact-page__image-wrapper">
+                    <img src="/assets/img/front-page-instagram.png" alt="Social Image" class="contact-page__image-social">
+                </div>
+            </div>
+           
+            <div class="contact-page__images-second-section">
+                <div class="contact-page__image-wrapper">
+                    <img src="/assets/img/blog1.png" alt="Social Image" class="contact-page__image-social">
+                </div>
+
+                <div class="contact-page__image-wrapper">
+                    <img src="/assets/img/blog-page.png" alt="Social Image" class="contact-page__image-social">
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <div class="contact-page__second-section">
+        <div class="contact-page__map">
+            <img src="/assets/img/map.png" alt="Map" class="contact-page__image-map">
+
+            <div class="contact-page__button">
+                Show route
+
+                <badge-icon src="/assets/img/arrow-right-light.svg" width="16" height="16"></badge-icon>
+            </div>
+        </div>
+
+        <div class="contact-page__contact">
+
+            <div class="contact-page__contact-title">
+                <div class="contact-page__title-logo">
+                    <img alt="diamond" src="/assets/img/diamondIcon.svg" class="contact-page__title-diamond"/>
+                    <div class="contact-page__title-line"></div>
+                </div>
+                
+                <h4 class="contact-page__title-content">
+                    Get in touch
+                </h4>
+
+                <div class="contact-page__title-logo">
+                    <div class="contact-page__title-line"></div>
+                    <img alt="diamond" src="/assets/img/diamondIcon.svg" class="contact-page__title-diamond"/>
+                </div>
+            </div>
+
+
+            <div class="contact-page__contact-information">
+                <div class="contact-page__information-item">
+                    <p class="contact-page__information-content-left">Address</p>
+                    <p class="contact-page__information-content-right">23 Greenfield Avenue, Prague 120 00</p>
+                </div>
+
+                <div class="contact-page__information-item">
+                    <p class="contact-page__information-content-left">Phone</p>
+                    <p class="contact-page__information-content-right">+49 1234 567890</p>
+                </div>
+
+                <div class="contact-page__information-item">
+                    <p class="contact-page__information-content-left">Email</p>
+                    <p class="contact-page__information-content-right">email@example.com</p>
+                </div>
+
+                <div class="contact-page__information-item">
+                    <p class="contact-page__information-content-left">Follow</p>
+                    <div class="contact-page__information-content-right">   
+                        <img src="/assets/img/facebook-logo-light.svg" alt="Facebook" class="contact-page__information-logo">
+                        <img src="/assets/img/instagram-logo-light.svg" alt="Instagram" class="contact-page__information-logo">
+                        <img src="/assets/img/twitter-logo-light.svg" alt="Twitter" class="contact-page__information-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

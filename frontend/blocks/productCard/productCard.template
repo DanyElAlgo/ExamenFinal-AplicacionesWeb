@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/blocks/productCard/productCard.css"/>
+<div class="product-card">
+    <div class="product-card__img-wrapper">
+        <img alt="Product" src="" class="product-card__img"/>
+        
+        <div class="product-card__add-button">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.8334 6.83171H6.83335V11.8317H5.16669V6.83171H0.166687V5.16504H5.16669V0.165039H6.83335V5.16504H11.8334V6.83171Z" fill="#272723" class="product-card__add-icon-fill"/>
+            </svg>
+        </div>
+    </div>
+    
+    <div class="product-card__content">
+        <div class="product-card__header">
+            <h5 class="product-card__title">
+
+            </h5>
+            <div class="product-card__line"></div>
+            <h5 class="product-card__price">
+
+            </h5>
+        </div>
+        <p class="product-card__description">
+
+        </p>
+    </div>
+</div>

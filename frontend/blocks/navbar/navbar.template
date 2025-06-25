@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/blocks/navbar/navbar.css">
+<div class="navbar">
+    <div class="navbar__menu-toggle">
+        <div class="navbar__menu-toggle-line"></div>
+        <div class="navbar__menu-toggle-line"></div>
+        <div class="navbar__menu-toggle-line"></div>
+    </div>
+    <div class="navbar__logo">
+        <img alt="logo" src="/assets/img/Logo.svg" class="navbar__logo-icon">
+    </div>
+    <div class="navbar__menu">
+        <a class="navbar__menu-item" href="/menu">
+            MENU
+        </a>
+        <a class="navbar__menu-item" href="/about">
+            ABOUT
+        </a>
+        <a class="navbar__menu-item navbar__menu-item--button" href="/book">
+            BOOK A TABLE
+        </a>
+    </div>
+
+    <modal-menu class="navbar__modal-menu navbar__modal-menu--hide"></modal-menu>
+</div>
