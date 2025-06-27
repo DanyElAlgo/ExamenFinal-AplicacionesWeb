@@ -16,7 +16,7 @@ class BlogList {
 
     constructor() {
         if(this.instance)
-            throw new Error("Ya existe una instancia");
+            throw new Error("Ya existe una instancia"); // Esto debería ser singleton
     }
 
     setBlogs(blogs) {

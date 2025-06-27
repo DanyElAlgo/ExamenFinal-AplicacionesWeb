@@ -2,6 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 :host {
@@ -12,13 +14,14 @@
 }
 
 .menu-page {
-    padding: 2rem 6rem 5rem 6rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
     gap: 4rem;
     display: flex;
     flex-direction: column;
     border-radius: 16px;
     border: 1px solid rgba(239, 231, 210, 0.15);
-    min-width: 0;
+    min-width: 220px;
 }
 
 .menu-page__navbar {

@@ -83,3 +83,18 @@ a {
     display: none;
 }
 
+@media screen and (max-width: 768px){
+    .navbar {
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .navbar__menu {
+        gap: 0.25rem;
+    }
+
+    .navbar__menu-item {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -157,13 +157,13 @@ class ReservationPage extends BaseHTMLElement {
 
     submitWithoutSession() {
 
-        return false;
+        return true;
     }
 
 
     submitWithSession() {
        
-        return false;
+        return true;
     }
 }
 
