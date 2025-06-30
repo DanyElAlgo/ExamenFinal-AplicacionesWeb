@@ -37,12 +37,12 @@
             </div>
 
             <div class="registration-page__group-form">
-                <input type="text" class="registration-page__input" placeholder="Password" name="password" autocomplete="off"/>
+                <input type="password" class="registration-page__input" placeholder="Password" name="password" autocomplete="off"/>
                 <div class="registration-page__input-content-error" id="password-error"></div>
             </div>
 
             <div class="registration-page__group-form">
-                <input type="text" class="registration-page__input" placeholder="Confirm password" name="confirm-password" autocomplete="off"/>
+                <input type="password" class="registration-page__input" placeholder="Confirm password" name="confirm-password" autocomplete="off"/>
                 <div class="registration-page__input-content-error" id="confirm-password-error"></div>
             </div>
 

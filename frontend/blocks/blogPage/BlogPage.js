@@ -20,20 +20,25 @@ class BlogPage extends BaseHTMLElement {
         await this.loadHTML("/blocks/blogPage/blogPage.template");
         await this.getBlogs();
         
-        
+        const creatButton = this.shadowRoot.querySelector(".blog-page__create-button");
 
         if(authService.isLoggedIn()) {
             this.addNav();
             this.renderBlogs(BlogList.instance.blogs, this.normalCardAddEventListener, true, true);
+            creatButton.classList.remove("blog-page__create-button--hidden");
+            creatButton.classList.add("blog-page__create-button--show");
+
+            creatButton.addEventListener("click", () => {
+                globalThis.app.router.go("/blog/create");
+            })
         }
         else {
             const nav = this.shadowRoot.querySelector(".blog-page__nav");
+            
             nav.style.display = "none";
             this.renderBlogs(BlogList.instance.blogs, this.normalCardAddEventListener, true, false);
         }
 
-        
-        
     }
 
     async getBlogs() {
@@ -48,13 +53,13 @@ class BlogPage extends BaseHTMLElement {
 
         for(let blog of blogs){
             const card = document.createElement("blog-card");
-            
+
             card.dataset.title = blog.title;
             card.dataset.description = blog.description;
-            card.dataset.authorId = blog.author.id;
-            card.dataset.authorName = `Author: ${blog.author.name}`;
+            card.dataset.authorId = blog.authorId;
+            card.dataset.authorName = `Author: ${blog.users.name}`;
             card.dataset.date = blog.date;
-            card.dataset.img = blog.img;
+            card.dataset.img = blog.imageUrl;
             card.dataset.favorite = blog.favorite;
             card.dataset.id = blog.id;
 
@@ -68,6 +73,7 @@ class BlogPage extends BaseHTMLElement {
 
             fragment.appendChild(card);
         }
+
         blogContainer.appendChild(fragment);
     }
 
@@ -99,7 +105,7 @@ class BlogPage extends BaseHTMLElement {
                 return;
 
             IMAGE_PAGES.BLOG_DETAIL_PAGE.url = card.dataset.img;
-            IMAGE_PAGES.BLOG_DETAIL_PAGE.width = '55%';
+            IMAGE_PAGES.BLOG_DETAIL_PAGE.width = '963px';
         
             globalThis.app.router.go(`/blog/${card.dataset.id}`);
         })

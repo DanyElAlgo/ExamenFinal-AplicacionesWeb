@@ -112,6 +112,17 @@ class Router {
                 pageConfig.footer = IMAGE_PAGES.CART_PAGE.footer;
                 break;
 
+            case "/blog/create":
+                contentElement = document.createElement("blog-create-page");
+                pageConfig.url = IMAGE_PAGES.BLOG_CREATE_PAGE.url;
+                pageConfig.title = IMAGE_PAGES.BLOG_CREATE_PAGE.title;
+                pageConfig.width = IMAGE_PAGES.BLOG_CREATE_PAGE.width;
+                pageConfig.height = IMAGE_PAGES.BLOG_CREATE_PAGE.height;
+                pageConfig.socials = IMAGE_PAGES.BLOG_CREATE_PAGE.socials;
+                pageConfig.footer = IMAGE_PAGES.BLOG_CREATE_PAGE.footer;
+
+                break;
+
             default:
                 if(route.startsWith("/blog/")) {
                     contentElement = document.createElement("blog-detail-page");

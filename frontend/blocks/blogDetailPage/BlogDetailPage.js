@@ -26,12 +26,13 @@ class BlogDetailPage extends BaseHTMLElement {
 
         title.textContent = blog.title;
         date.textContent = formatDateTime(new Date(blog.date));
-        author.textContent = `Author: ${blog.author.name}`;
+        author.textContent = `Author: ${blog.users.name}`;
 
         const content = blog.content;
+
         this.renderPreview(content);
 
-        if(authService.isLoggedIn() && blog.author.id == authService.getUserId()){
+        if(authService.isLoggedIn() && blog.authorId== authService.getUserId()){
             this.enableEdit(content);
         }
     }
@@ -73,6 +74,7 @@ class BlogDetailPage extends BaseHTMLElement {
             
             const command = new Command(BLOG_COMMAND.SAVE_BLOG, { blogId: this.dataset.blogId, title: title.textContent, content: editable.value });
             BlogCommandExecutor.execute(command);
+            globalThis.app.router.go("/blog");
         })
 
     }

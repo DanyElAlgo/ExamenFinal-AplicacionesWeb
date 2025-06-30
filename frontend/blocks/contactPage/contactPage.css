@@ -21,9 +21,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* gap: 3rem; */
     padding: 3.375rem 3rem 3rem 3rem;
     border-radius: 16px;
     border: 1px solid rgba(239, 231, 210, 0.15);
+    
     flex: 1;
 }
 
@@ -197,7 +199,7 @@
     text-align: end;
 }
 
-/* Por qué lo estoy haciendo así wtfff */
+
 @media screen and (max-width: 1920px){
     .contact-page__images-second-section{
         display: none;

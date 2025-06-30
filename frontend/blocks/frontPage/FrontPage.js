@@ -13,6 +13,27 @@ class FrontPage extends BaseHTMLElement {
 
     async init() {
         await this.loadHTML('/blocks/frontPage/frontPage.template');
+
+        this.addListeners();
+    }
+
+    addListeners() {
+
+        const badgeMenu = this.shadowRoot.querySelector(".front-page__badge-menu");
+        const badgeReservation = this.shadowRoot.querySelector(".front-page__badge-reservation");
+        const badgeRestaurant = this.shadowRoot.querySelector(".front-page__badge-restaurant");
+
+        badgeMenu.addEventListener("click", () => {
+            globalThis.app.router.go("/menu");
+        });
+
+        badgeReservation.addEventListener("click", () => {
+            globalThis.app.router.go("/book");
+        });
+
+        badgeRestaurant.addEventListener("click", () => {
+            globalThis.app.router.go("/about");
+        });
     }
 }
 

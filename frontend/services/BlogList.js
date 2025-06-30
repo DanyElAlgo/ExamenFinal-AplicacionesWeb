@@ -16,7 +16,7 @@ class BlogList {
 
     constructor() {
         if(this.instance)
-            throw new Error("Ya existe una instancia"); // Esto debería ser singleton
+            throw new Error("Ya existe una instancia");
     }
 
     setBlogs(blogs) {
@@ -29,7 +29,7 @@ class BlogList {
     }
 
     getMyArticles() {
-        const myArticles = this.#blogs.filter(blog => blog.author.id == authService.getUserId());
+        const myArticles = this.#blogs.filter(blog => blog.authorId == authService.getUserId());
         return myArticles;
     }
 

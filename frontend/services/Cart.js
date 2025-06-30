@@ -1,3 +1,5 @@
+import ProductList from "./ProductList.js";
+
 class Cart {
 
     #productMap = {};
@@ -21,6 +23,17 @@ class Cart {
 
     getQuantity() {
         return Object.values(this.#productMap).reduce((sum, quantity) => sum + quantity, 0);
+    }
+
+    getTotalPrice() {
+        const products = ProductList.instance.filterById(Object.keys(this.#productMap));
+        let sum = 0;
+
+        for(let product of products) {
+            sum += Number(product.price) * Number(this.#productMap[product.id]);
+        }
+
+        return sum;
     }
 
 

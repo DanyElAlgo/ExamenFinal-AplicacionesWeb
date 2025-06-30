@@ -1,6 +1,7 @@
 import BaseHTMLElement from "../base/BaseHTMLElement.js";
 import ProductList from "../../services/ProductList.js";
 import { CATEGORY } from "../../services/conf/ProductCategoryConst.js";
+import productAPI from "../../services/Api/ProductApi.js";
 
 class MenuPage extends BaseHTMLElement {
 
@@ -22,12 +23,9 @@ class MenuPage extends BaseHTMLElement {
     }   
 
     async getProducts() {
-        const response = await fetch('/data/products.json');
-
-        if(!response.ok)
-            console.error(response.status, "Error al obtener los productos");
-        
-       ProductList.instance.setProducts(await response.json());
+        const products = await productAPI.getProducts();
+      
+       ProductList.instance.setProducts(products);
        const categoryProducts = ProductList.instance.groupByCategories();
 
        return categoryProducts;
@@ -57,9 +55,10 @@ class MenuPage extends BaseHTMLElement {
 
             for(let product of categoryProducts[category]) {
                 const productElement = document.createElement("product-card");
+                productElement.classList.add("menu-page__item");
                 productElement.dataset.title = product.name;
                 productElement.dataset.description = product.description;
-                productElement.dataset.src = product.image;
+                productElement.dataset.src = product.imageUrl;
                 productElement.dataset.price = `$${product.price}`;
                 productElement.dataset.productId = product.id;
                 productElement.dataset.vegetarian = product.vegetarian;
@@ -79,7 +78,6 @@ class MenuPage extends BaseHTMLElement {
     applyButtonListeners() {
         const buttons = this.shadowRoot.querySelector(".menu-page__navbar");
         const allButton = this.shadowRoot.getElementById('all-button');
-        allButton.querySelector('button').focus();
 
         buttons.addEventListener("click", (event) => {
 

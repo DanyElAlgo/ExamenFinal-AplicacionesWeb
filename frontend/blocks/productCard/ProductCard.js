@@ -23,7 +23,7 @@ class ProductCard extends BaseHTMLElement {
         const imageElement = this.querySelector(".product-card__img");
         const priceElement = this.querySelector(".product-card__price");
 
-        titleElement.innerHTML = `<span class="product-card__title-text">${title}</span>${vegetarian == "true" ? '<img class="product-card__leaf" alt="vegetarian icon" src="/assets/img/leaf.svg">' : ""}`;
+        titleElement.innerHTML = `${title}${vegetarian == "true" ? '<img alt="leaf" src="/assets/img/leaf.svg"></img>' : ""}`;
         descriptionElement.textContent = description;
         imageElement.src = src;
         priceElement.textContent = `${price}`;
@@ -65,7 +65,7 @@ class ProductCard extends BaseHTMLElement {
             }));
 
             const commands = [];
-            commands.push(new Command(LAYOUT_COMMAND.CHANGE_BACKGROUND, { url: src, width: '64%', height: '94vh'}));
+            commands.push(new Command(LAYOUT_COMMAND.CHANGE_BACKGROUND, { url: src, width: '928px', height: '94vh'}));
             commands.push(new Command(LAYOUT_COMMAND.CHANGE_TITLE, { title: title }));
             commands.push(new Command(LAYOUT_COMMAND.TOGGLE_ADD_BUTTON, { show: true, productId: productId }));
             

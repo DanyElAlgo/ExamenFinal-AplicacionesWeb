@@ -29,7 +29,6 @@
     justify-content: space-between;
     border: 1px solid rgba(239, 231, 210, 0.15);
     border-radius: 1rem;
-    max-width: 50%;
 }
 
 
@@ -62,6 +61,7 @@
     height: 377.5px;
     border-radius: 1rem;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .about-page__main-img, .about-page__history-img {

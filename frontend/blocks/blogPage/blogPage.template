@@ -30,6 +30,8 @@
         </a>
     </nav>
 
+    <form-button data-title="Create a blog" class="blog-page__create-button blog-page__create-button--hidden"></form-button>
+
     <div class="blog-page__blogs">
         
     </div>

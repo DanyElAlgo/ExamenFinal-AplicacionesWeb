@@ -48,8 +48,7 @@
 .blog-page__nav {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem 5rem;
+    gap: 5rem;
 }
 
 .blog-page__nav-item {
@@ -85,6 +84,14 @@
 
 .blog-page__card--clickeable {
     cursor: pointer;
+}
+
+.blog-page__create-button--hidden {
+    display: none;
+}
+
+.blog-page__create-button--show {
+    display: block;
 }
 
 @media screen and (max-width: 1024px){

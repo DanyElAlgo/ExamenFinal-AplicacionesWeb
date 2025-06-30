@@ -2,7 +2,7 @@
 
 <section class="menu-page">
     <div class="menu-page__navbar">
-        <button-custom data-title="All" data-category-id="0" id="all-button"></button-custom>
+        <button-custom data-title="All" data-category-id="0" id="all-button" data-focus="true"></button-custom>
         <button-custom data-title="Maki" data-category-id="1"></button-custom>
         <button-custom data-title="Uramaki" data-category-id="2"></button-custom>
         <button-custom data-title="Special Rolls" data-category-id="3"></button-custom>

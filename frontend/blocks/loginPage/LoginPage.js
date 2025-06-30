@@ -1,6 +1,7 @@
 import BaseHTMLElement from "../base/BaseHTMLElement.js";
 import ValidatorForm from "../../services/Validators/ValidatorForm.js";
 import ValidatorLoginForm from "../../services/Validators/ValidatorLoginForm.js";
+import authService from "../../services/AuthService.js";
 
 const validator = new ValidatorForm(new ValidatorLoginForm());
 
@@ -82,20 +83,28 @@ class LoginPage extends BaseHTMLElement {
     }
 
 
-    submitForm() {
+    async submitForm() {
         const email = this.shadowRoot.querySelector('[name="email"]');
         const password = this.shadowRoot.querySelector('[name="password"]');
-        const error = (Math.random() <= 0.5);
+        
+        const user = {
+            email: email.value,
+            password: password.value
+        };
+
+        const data = await authService.login(user);
 
         const formError = this.shadowRoot.querySelector(".login-page__form-error");
         formError.textContent = "";
       
-        if(error) {
-            formError.textContent = "El correo o la contraseña es incorrecta. Intentalo de nuevo";
+        if(data.generalError) {
+            formError.textContent = data.generalError;
         }
         else {
             email.value = "";
             password.value = "";
+
+            globalThis.app.router.go('/');
         }
         
     }

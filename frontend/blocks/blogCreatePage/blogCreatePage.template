@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/blocks/blogCreatePage/blogCreatePage.css"/>
+
+<section class="blog-create-page">
+    <div class="blog-create-page__header">
+        <div class="blog-create-page__header-date">
+            <div class="blog-create-page__date-logo">
+                <img src="/assets/img/diamondIcon.svg" alt="diamond" class="blog-create-page__logo-diamond">
+                <div class="blog-create-page__logo-line"></div>
+            </div>
+
+            <p class="blog-create-page__date-content">
+                Create your Blog
+            </p>
+
+            <div class="blog-create-page__date-logo">
+                <div class="blog-create-page__logo-line"></div>
+                <img src="/assets/img/diamondIcon.svg" alt="diamond" class="blog-create-page__logo-diamond">
+            </div>
+        </div>
+
+        <h1 class="blog-create-page__header-title" contenteditable>Your title</h1>
+
+
+        <div class="blog-create-page__logo">
+            <img src="/assets/img/diamondIcon.svg" alt="diamond" class="blog-create-page__logo-diamond">
+            <div class="blog-create-page__logo-line"></div>
+            <img src="/assets/img/diamondIcon.svg" alt="diamond" class="blog-create-page__logo-diamond">
+        </div>
+    </div>
+
+    <div class="blog-create-page__description">
+        
+       <div class="blog-create-page__group-form">
+            <input type="text" class="blog-create-page__input" placeholder="Image url" name="imageUrl" autocomplete="off"/>
+            <div class="blog-create-page__input-error blog-create-page__input-error--email"></div>
+        </div>
+        
+        <p class="blog-create-page__description--small" contenteditable>Your main description</p>
+
+        <div class="blog-create-page__description-preview">Your description</div>
+
+        <textarea class="blog-create-page__description-editable" hidden>Your description</textarea>
+
+        <form-button data-title="Save" data-disabled="" class="blog-create-page__save-button"></form-button>
+    </div>
+</section>

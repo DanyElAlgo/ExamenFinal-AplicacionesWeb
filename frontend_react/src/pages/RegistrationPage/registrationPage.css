@@ -1,0 +1,117 @@
+.registration-page {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+    padding: 5rem 6rem;
+    border-radius: 16px;
+    border: 1px solid rgba(239, 231, 210, 0.15);
+}
+
+
+.registration-page__form {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 80%;
+}
+
+.registration-page__title {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.registration-page__logo {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+}
+
+.registration-page__title-content {
+    font-family: "Forum", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: rgba(239, 231, 210, 1);
+    text-transform: uppercase;
+}
+
+.registration-page__logo-line {
+    width: 50px;
+    height: 1px;
+    background-color: rgba(239, 231, 210, 0.15);
+}
+
+.registration-page__group-form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.registration-page__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.registration-page__input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-color: rgba(24, 24, 24, 0.5);
+    border: 1px solid rgba(239, 231, 210, 0.15);
+    border-radius: 10px;
+    font-size: 16px;
+    color: rgba(239, 231, 210, 1);
+}
+
+
+.registration-page__input--error {
+    border: 1px solid rgba(169, 125, 92, 1);
+}
+
+
+.registration-page__input::placeholder {
+    font-family: var(--font-satoshi-light);
+    font-size: 16px;
+    font-weight: 200;
+    color: rgba(239, 231, 210, 0.7);
+}
+
+.registration-page__input--error::placeholder {
+    color: rgba(169, 125, 92, 1);
+}
+
+.registration-page__button {
+    width: 100%
+}
+
+.registration-page__link {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: underline;
+    color: rgba(239, 231, 210, 1);
+    cursor: pointer;
+}
+
+.registration-page__input-content-error, .registration-page__form-error {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(169, 125, 92, 1);
+}
+
+.registration-page__form-error {
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .registration-page {
+        padding: 3rem;
+    }
+    .registration-page__title-content{
+        font-size: 30px;
+    }
+}

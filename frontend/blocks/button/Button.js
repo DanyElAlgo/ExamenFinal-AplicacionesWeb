@@ -16,6 +16,10 @@ class Button extends BaseHTMLElement {
         const button = this.querySelector(".button");
         const title = this.dataset.title;
         button.textContent = title;
+        
+        if(this.dataset.focus) {
+            this.lastElementChild.focus();
+        }
     }
 
 }

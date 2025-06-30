@@ -16,6 +16,7 @@ import BlogPage from "./blocks/blogPage/BlogPage.js";
 import BlogCard from "./blocks/blogCard/BlogCard.js";
 import ContactPage from "./blocks/contactPage/ContactPage.js";
 import BlogDetailPage from "./blocks/blogDetailPage/BlogDetailPage.js";
+import BlogCreatePage from "./blocks/blogCreatePage/BlogCreatePage.js";
 
 import layout from "./services/Layout.js";
 
@@ -23,10 +24,31 @@ import layout from "./services/Layout.js";
 globalThis.app = {};
 
 app.isAuthenticated = false;
-app.userId = 1;
+app.userId = -1;
 app.router = router;
 
 document.addEventListener("DOMContentLoaded", () => {
+    const localStorageToken = localStorage.getItem("token");
+
+    if(localStorageToken) {
+        const userId = JSON.parse(atob(localStorageToken.split(".")[1])).id;
+        app.isAuthenticated = true;
+        app.userId = userId
+    }
+
     app.router.init();
     layout.init();
+    layout.addListeners();
 });
+
+document.addEventListener("reload-layout", () => {
+    layout.init();
+})
+
+document.addEventListener("sign-out", () => {
+    localStorage.removeItem("token");
+    app.userId = -1;
+    app.isAuthenticated = false;
+    layout.init();
+    globalThis.app.router.go("/");
+})

@@ -6,16 +6,29 @@ import authService from "./AuthService.js";
 class Layout {
 
     init() {
+        const personIcon = document.querySelector(".layout-page__account-icon");
+        const registrationButton = document.querySelector(".layout-page__account-register");
+        personIcon.style.display = 'flex';
+        registrationButton.style.display = 'inline-block';
+
         if(!authService.isLoggedIn()) {
-            const personIcon = document.querySelector(".layout-page__account-icon");
             personIcon.style.display = 'none';
         }
         else {
-            const registrationButton = document.querySelector(".layout-page__account-register");
             registrationButton.style.display = 'none';
         }
+    }
 
+
+    addListeners() {
+        const personIcon = document.querySelector(".layout-page__account-icon");
         const addButtonLayout = document.querySelector(".layout-page__add-button");
+        const cartIcon = document.querySelector(".layout-page__account-icon--cart");
+        const registerButton = document.querySelector(".layout-page__account-register");
+
+        personIcon.addEventListener("click",() => {
+            document.dispatchEvent(new Event("sign-out"));
+        });
 
         addButtonLayout.addEventListener("click", () => {
             //alert(`Añadido al carrito el producto con Id = ${addButtonLayout.dataset.productId}`);
@@ -23,20 +36,15 @@ class Layout {
             CartCommandExecutor.execute(command);
         });
 
-        const cartIcon = document.querySelector(".layout-page__account-icon--cart");
+        registerButton.addEventListener("click", () => {
+            globalThis.app.router.go("/signup")
+        });
 
         cartIcon.addEventListener("click", () => {
             globalThis.app.router.go("/cart");
         });
-
-
-        const registerButton = document.querySelector(".layout-page__account-register");
-
-        registerButton.addEventListener("click", () => {
-            globalThis.app.router.go("/signup")
-        })
-        
     }
+
 }
 
 

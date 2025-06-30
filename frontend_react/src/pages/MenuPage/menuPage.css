@@ -1,0 +1,82 @@
+.menu-page {
+    padding: 2rem 6rem 5rem 6rem;
+    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    border: 1px solid rgba(239, 231, 210, 0.15);
+    min-width: 0;
+}
+
+.menu-page__navbar {
+    display: flex;
+    gap: 0.25rem;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.menu-page__category-title-content {
+    font-family: "Forum", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: rgba(239, 231, 210, 1);
+    text-transform: uppercase;
+}
+
+.menu-page__category-title {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-page__category-logo {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+}
+
+.menu-page__logo-line {
+    width: 50px;
+    height: 1px;
+    background-color: rgba(239, 231, 210, 0.15);
+}
+
+.menu-page__content {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.menu-page__category-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+.menu-page__category__items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-page {
+        padding: 1rem 2rem 3rem 2rem;
+        gap: 2rem;
+    }
+    
+    .menu-page__category-title-content {
+        font-size: 24px;
+    }
+    
+    .menu-page__content {
+        gap: 4rem;
+    }
+}

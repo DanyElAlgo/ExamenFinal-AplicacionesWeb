@@ -1,0 +1,105 @@
+.cart-page {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 6rem 6rem 5rem 6rem;
+    align-items: center;
+    border: 1px solid rgba(239, 231, 210, 0.15);
+    border-radius: 1rem;
+}
+
+
+.cart-page__content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+.cart-page__title {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+.cart-page__title-content {
+    font-family: "Forum", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: rgba(239, 231, 210, 1);
+    text-transform: uppercase;
+}
+
+
+.cart-page__category-logo {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+}
+
+.cart-page__logo-line {
+    width: 50px;
+    height: 1px;
+    background-color: rgba(239, 231, 210, 0.15);
+}
+
+.cart-page__form-button {
+    width: 100%
+}
+
+
+.cart-page__information {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.cart-page__total-skeleton {
+    background-color: rgba(10, 11, 10, 1);
+    width: 150px;
+    height: 100px;
+    border-radius: 16px;
+}
+
+.cart-page__total-info-main {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.cart-page__total_title, .cart-page__total-price {
+    color: rgba(239, 231, 210, 1);
+    font-family: "Forum", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.cart-page__total-info {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    flex: 1;
+}
+
+
+.cart-page__total-line {
+    height: 1px;
+    flex: 1;
+    border-bottom: 1px dashed rgba(239, 231, 210, 0.15);
+    align-self: flex-end;
+    margin-bottom: 4px;
+}
+
+@media screen and (max-width: 1024px) {
+    .cart-page__total-skeleton{
+        display: none;
+    }
+}

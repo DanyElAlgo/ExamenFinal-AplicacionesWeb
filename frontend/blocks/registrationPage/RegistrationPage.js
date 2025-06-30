@@ -1,6 +1,7 @@
 import BaseHTMLElement from "../base/BaseHTMLElement.js";
 import ValidatorForm from "../../services/Validators/ValidatorForm.js";
 import ValidatorSignUpForm from "../../services/Validators/ValidatorSignUpForm.js";
+import authService from "../../services/AuthService.js";
 
 const validator = new ValidatorForm(new ValidatorSignUpForm());
 
@@ -116,21 +117,37 @@ class RegistrationPage extends BaseHTMLElement {
     }
 
 
-    submitForm() {
+    async submitForm() {
     
         const formError = this.shadowRoot.querySelector(".registration-page__form-error");
         formError.textContent = "";
 
-        const hasError = Math.random() < 0.5;
+        const nameInput = this.shadowRoot.querySelector('[name="name"]');
+        const phoneInput = this.shadowRoot.querySelector('[name="phone"]');
+        const emailInput = this.shadowRoot.querySelector('[name="email"]');
+        const passwordInput = this.shadowRoot.querySelector('[name="password"]');
+        const addressInput = this.shadowRoot.querySelector('[name="address"]');
 
-        if(hasError) {
-            formError.textContent = "Email is already in use";
+        const user = {
+            name: nameInput.value,
+            phoneNumber: phoneInput.value,
+            email: emailInput.value,
+            password: passwordInput.value,
+            address: addressInput.value
+        }
+
+        const data = await authService.createUser(user);
+
+        if(data.generalError) {
+            formError.textContent = data.generalError;
         }
         else {
            const inputs = Array.from(this.shadowRoot.querySelectorAll(".registration-page__input"));
 
            for(const input of inputs)
                 input.value = "";
+
+           globalThis.app.router.go("/");
         }
     }
 

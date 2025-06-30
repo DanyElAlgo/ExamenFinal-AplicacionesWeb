@@ -127,7 +127,6 @@
     resize: none;
 }
 
-
 @media screen and (max-width: 1024px) {
     .blog-detail-page{
         padding: 3rem;
@@ -136,3 +135,4 @@
         font-size: 3rem;
     }
 }
+

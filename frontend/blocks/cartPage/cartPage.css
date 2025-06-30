@@ -4,6 +4,12 @@
     padding: 0;
 }
 
+/* 
+:host {
+    width: 100%;
+    display: block;
+} */
+
 .cart-page {
     display: flex;
     flex-direction: column;
@@ -107,5 +113,126 @@
 @media screen and (max-width: 1024px) {
     .cart-page__total-skeleton{
         display: none;
+    }
+}
+
+@media screen and (max-width: 1920px){
+    .contact-page__images-second-section{
+        display: none;
+    }
+    .contact-page__images-first-section{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .contact-page__images-first-section{
+        display: none;
+    }
+    .contact-page__first-section {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .contact-page__opening,
+    .contact-page__contact {
+        padding: 2.5rem 2rem 2rem 2rem;
+    }
+
+    .contact-page__images-first-section,
+    .contact-page__images-second-section {
+        justify-content: center;
+    }
+
+    .contact-page__image-wrapper {
+        max-width: 200px;
+        max-height: 206px;
+    }
+
+    .contact-page__second-section {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .contact-page__map {
+        max-width: 100%;
+        max-height: 350px;
+    }
+
+    .contact-page__title-content {
+        font-size: 22px;
+    }
+
+    .contact-page__information-content-right {
+        width: 60%;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-page {
+        gap: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    .contact-page__opening,
+    .contact-page__contact {
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    .contact-page__title-content {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .contact-page__opening-title,
+    .contact-page__contact-title {
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-page__images-first-section,
+    .contact-page__images-second-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-page__image-wrapper {
+        max-width: 280px;
+        max-height: 200px;
+    }
+
+    .contact-page__map {
+        max-height: 300px;
+    }
+
+    .contact-page__button {
+        padding: 0.5rem 0rem 0rem 1rem;
+        font-size: 14px;
+        gap: 0.5rem;
+    }
+
+    .contact-page__hour-item {
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .contact-page__hour-line {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .contact-page__information-item {
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    .contact-page__information-content-right {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .contact-page__information-content-left {
+        font-size: 11px;
     }
 }

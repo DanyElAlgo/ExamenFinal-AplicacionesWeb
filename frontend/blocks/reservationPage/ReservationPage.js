@@ -3,6 +3,7 @@ import authService from "../../services/AuthService.js";
 import ValidatorForm from "../../services/Validators/ValidatorForm.js";
 import ValidatorWithoutSession from "../../services/Validators/ValidatorWithoutSession.js";
 import ValidatorWithSessionForm from "../../services/Validators/ValidatorWithSessionForm.js";
+import reservationAPI from "../../services/Api/ReservationApi.js";
 
 
 const validator = new ValidatorForm();
@@ -134,18 +135,19 @@ class ReservationPage extends BaseHTMLElement {
         return true;
     }
 
-    submitForm(){ 
+    async submitForm(){ 
         let success = false;
         const error = this.shadowRoot.getElementById("form-error");
         error.textContent = "";
 
         if(authService.isLoggedIn())
-            success = this.submitWithSession();
+            success = await this.submitWithSession();
         else 
-            success = this.submitWithoutSession();
+            success = await this.submitWithoutSession();
 
         if(!success){
             error.textContent = "Hubo un error al reservar. Intentalo denuevo";
+            return;
         }
 
         const inputs = this.shadowRoot.querySelectorAll(".reservation-page__input");
@@ -155,15 +157,47 @@ class ReservationPage extends BaseHTMLElement {
 
     }
 
-    submitWithoutSession() {
+    async submitWithoutSession() {
 
-        return true;
+        const nameInput = this.shadowRoot.querySelector('[name="name"]');
+        const phoneInput = this.shadowRoot.querySelector('[name="phone"]');
+        const emailInput = this.shadowRoot.querySelector('[name="email"]');
+
+        const guestsInput = this.shadowRoot.querySelector('[name="guests"]');
+        const dateInput = this.shadowRoot.querySelector('[name="date"]');
+        const timeInput = this.shadowRoot.querySelector('[name="time"]');
+
+
+        const reservation = {
+            name: nameInput.value,
+            phoneNumber: phoneInput.value,
+            email: emailInput.value,
+            guests: guestsInput.value,
+            date: dateInput.value,
+            time: timeInput.value + ":00"
+        };
+
+        const successful = await reservationAPI.reservateWithoutSession(reservation);
+
+        return successful;
     }
 
 
-    submitWithSession() {
-       
-        return true;
+    async submitWithSession() {
+        const guestsInput = this.shadowRoot.querySelector('[name="guests"]');
+        const dateInput = this.shadowRoot.querySelector('[name="date"]');
+        const timeInput = this.shadowRoot.querySelector('[name="time"]');
+
+        const reservation = {
+            guests: guestsInput.value,
+            date: dateInput.value,
+            time: timeInput.value + ":00"
+        }
+
+
+        const successful = await reservationAPI.reservateWithSession(reservation);
+
+        return successful;
     }
 }
 

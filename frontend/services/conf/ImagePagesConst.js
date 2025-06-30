@@ -9,7 +9,7 @@ export const IMAGE_PAGES = {
     },
     MENU_PAGE: {
         url: '/assets/img/menu-page.png',
-        width: '64%',
+        width: '928px',
         height: '94vh',
         title: 'Menu',
         socials: false,
@@ -17,7 +17,7 @@ export const IMAGE_PAGES = {
     },
     BOOK_TABLE_PAGE: {
         url: '/assets/img/book-table-page.png',
-        width: '64%',
+        width: '928px',
         height: '94vh',
         title: 'Book a table',
         socials: false,
@@ -25,7 +25,7 @@ export const IMAGE_PAGES = {
     },
     ABOUT_PAGE: {
         url: '/assets/img/about-page.png',
-        width: '64%',
+        width: '928px',
         height: '94vh',
         title: 'About',
         socials: false,
@@ -33,7 +33,7 @@ export const IMAGE_PAGES = {
     },
     CONTACT_PAGE: {
         url: '/assets/img/contact-page.png',
-        width: '58%',
+        width: '928px',
         height: '94vh',
         title: 'Contact',
         socials: false,
@@ -41,7 +41,7 @@ export const IMAGE_PAGES = {
     },
     BLOG_PAGE: {
         url: '/assets/img/blog-page.png',
-        width: '55%',
+        width: '928px',
         height: '94vh',
         title: 'Blog',
         socials: false,
@@ -49,7 +49,7 @@ export const IMAGE_PAGES = {
     },
     LOGIN_PAGE: {
         url: '/assets/img/login-page.png',
-        width: '64%',
+        width: '928px',
         height: '94vh',
         title: 'Login',
         socials: false,
@@ -57,7 +57,7 @@ export const IMAGE_PAGES = {
     },
     CART_PAGE: {
         url: '/assets/img/menu-page.png',
-        width: '64%',
+        width: '928px',
         height: '94vh',
         title: 'Cart',
         socials: false,
@@ -65,7 +65,7 @@ export const IMAGE_PAGES = {
     },
     SIGN_UP_PAGE: {
         url: '/assets/img/login-page.png',
-        width: '64%',
+        width: '928px',
         height: '94vh',
         title: 'Registration',
         socials: false,
@@ -73,9 +73,17 @@ export const IMAGE_PAGES = {
     },
     BLOG_DETAIL_PAGE: {
         url: '/assets/img/blog1.png',
-        width: '64%',
+        width: '928px',
         height: '94vh',
         title: '',
+        socials: false,
+        footer: true
+    },
+    BLOG_CREATE_PAGE: {
+        url: '/assets/img/blog1.png',
+        width: '928px',
+        height: '94vh',
+        title: "Post",
         socials: false,
         footer: true
     }

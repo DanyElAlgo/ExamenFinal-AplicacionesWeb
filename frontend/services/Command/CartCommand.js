@@ -1,4 +1,5 @@
 import cart from "../Cart.js"
+import orderAPI from "../Api/OrderApi.js";
 
 export const CartCommand = {
     ADD: 'add',
@@ -26,6 +27,14 @@ export const CartCommandExecutor = {
 
             case CartCommand.PLACE_ORDER:
                 counter.style.display = 'none';
+                
+                const order = {
+                    total: cart.getTotalPrice(),
+                    products: cart.productMap
+                };
+                
+                orderAPI.placeOrder(order);
+            
                 cart.clear();
 
                 document.dispatchEvent(new Event("reload-cart"));

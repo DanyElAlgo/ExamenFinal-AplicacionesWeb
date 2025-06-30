@@ -3,13 +3,12 @@
     flex-direction: row;
     gap: 3rem;
     align-items: center;
-    justify-content: center;
 }
 
 
 .blog-card__image-wrapper {
-    max-height: 210px;
     max-width: 280px;
+    max-height: 210px;
     border-radius: 16px;
     overflow: hidden;
     position: relative;
@@ -98,7 +97,6 @@
     cursor: pointer;
 }
 
-/* Por qué otra vez tengo problemas con el perfeccionismo????? */
 @media screen and (max-width: 1500px) {
     .blog-card{
         flex-wrap: wrap;

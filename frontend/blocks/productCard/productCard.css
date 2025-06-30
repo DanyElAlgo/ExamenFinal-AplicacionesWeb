@@ -1,5 +1,10 @@
 @import url(/assets/fonts/satoshi/css/satoshi.css);
 
+:host {
+    display: flex;
+    justify-content: center;
+}
+
 .product-card {
     display: flex;
     gap: 1.5rem;
@@ -8,6 +13,7 @@
     align-items: center;
     background-position: center center;
     max-width:100%;
+    justify-content: center;
 }
 
 .product-card__img-wrapper {

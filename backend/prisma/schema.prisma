@@ -1,0 +1,94 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Blog {
+  id             Int              @id @default(autoincrement())
+  title          String           @db.VarChar(100)
+  description    String           @db.VarChar(200)
+  date           DateTime         @db.Date
+  imageUrl       String           @db.VarChar(300)
+  content        String
+  authorId       Int
+  users          User            @relation(fields: [authorId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  favoriteBlogs FavoriteBlog[]
+}
+
+model Category {
+  id       Int        @id @default(autoincrement())
+  name     String     @db.VarChar(50)
+  products Product[]
+}
+
+model FavoriteBlog {
+  blogId Int
+  userId Int
+  blogs   Blog @relation(fields: [blogId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  users   User @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@id([blogId, userId])
+}
+
+model OrderDetail {
+  id         Int      @id @default(autoincrement())
+  quantity   Int
+  orderId   Int
+  productId Int
+  orders     Order   @relation(fields: [orderId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  products   Product @relation(fields: [productId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model Order {
+  id            Int             @id @default(autoincrement())
+  total         Decimal         @db.Decimal(7, 2)
+  createdAt    DateTime        @db.Timestamp(6)
+  userId       Int
+  orderDetails OrderDetail[]
+  users         User           @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model Product {
+  id            Int             @id @default(autoincrement())
+  name          String          @db.VarChar(100)
+  description   String          @db.VarChar(200)
+  imageUrl      String          @db.VarChar(300)
+  vegetarian    Boolean
+  price         Decimal         @db.Decimal(7, 2)
+  calories      Int
+  available     Boolean
+  categoryId    Int
+  orderDetails  OrderDetail[]
+  categories    Category      @relation(fields: [categoryId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model Reservation {
+  id           Int      @id @default(autoincrement())
+  name         String   @db.VarChar(100)
+  phoneNumber String   @db.VarChar(30)
+  email        String   @db.VarChar(200)
+  guests       Int
+  date         DateTime @db.Date
+  time         DateTime @db.Time(6)
+  userId      Int?
+  users        User?   @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model User {
+  id             Int              @id @default(autoincrement())
+  name           String           @db.VarChar(100)
+  phoneNumber   String           @db.VarChar(30)
+  email          String           @unique @db.VarChar(200)
+  password       String           @db.VarChar(300)
+  address        String           @db.VarChar(300)
+  blogs          Blog[]
+  favoriteBlogs  FavoriteBlog[]
+  orders         Order[]
+  reservations   Reservation[]
+}
