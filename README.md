@@ -1,5 +1,13 @@
 # ExamenFinal-AplicacionesWeb
 
+## Link al documento de Google Docs:
+
+https://docs.google.com/document/d/1PYaw0MHHC2FVHwkVWMuvMoHdrOxdJcNNPxIXzwgsn1Q/edit?usp=sharing
+
+## Link al Figma:
+
+https://www.figma.com/design/wP5kfOPevxreKYpiyPORbM/web-app-exam-1--Copy-?node-id=0-1&t=jHjwnFcovhG7HwA4-1
+
 ## Estructura General del Proyecto
 
 ### Backend
@@ -65,8 +73,3 @@ El frontend está ubicado en la carpeta `frontend/` y su estructura principal es
 ![Strategy](./schema_design/strategy.png)
 
 - **Layout**: `index.html` (estructura base reutilizable)
-
-
-## Figma
-[Link al figma](https://www.figma.com/design/ZFRTKSfgtjtv0mIJXLP2aw/ExamenFinal---AppsWeb---Rafael-Vargas?node-id=0-1&t=Tp6fUMub07pRFeaH-1)
-

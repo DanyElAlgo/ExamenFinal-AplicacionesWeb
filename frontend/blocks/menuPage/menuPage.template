@@ -11,6 +11,9 @@
 
         
     </div>
+    <template id="loader-template">
+        <p class="loader__trigger" style="color:#FFFFFF">Loading...</p>
+    </template>
 </section>
 
 <template id="menu-page__category-section-id">

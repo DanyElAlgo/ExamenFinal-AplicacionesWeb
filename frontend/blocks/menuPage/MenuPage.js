@@ -4,109 +4,134 @@ import { CATEGORY } from "../../services/conf/ProductCategoryConst.js";
 import productAPI from "../../services/Api/ProductApi.js";
 
 class MenuPage extends BaseHTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+  }
 
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
+  connectedCallback() {
+    this.init();
+  }
+
+  async init() {
+    await this.loadHTML("/blocks/menuPage/menuPage.template");
+    const productsByCategory = await this.getProducts();
+
+    this.renderProducts(productsByCategory);
+    this.applyButtonListeners();
+  }
+
+  async getProducts() {
+    const products = await productAPI.getProducts();
+
+    ProductList.instance.setProducts(products);
+    const categoryProducts = ProductList.instance.groupByCategories();
+
+    return categoryProducts;
+  }
+
+  renderProducts(categoryProducts) {
+    const template = this.shadowRoot.getElementById(
+      "menu-page__category-section-id"
+    );
+    const fragment = new DocumentFragment();
+    const content = this.shadowRoot.querySelector(".menu-page__content");
+    content.innerHTML = "";
+
+    for (let category in categoryProducts) {
+      const section = template.content.cloneNode(true).firstElementChild;
+      const categoryTitle = section.querySelector(
+        ".menu-page__category-title-content"
+      );
+      const items = section.querySelector(".menu-page__category__items");
+
+      if (category == CATEGORY.MAKI) categoryTitle.textContent = "Maki";
+      else if (category == CATEGORY.URAMAKI)
+        categoryTitle.textContent = "Uramaki";
+      else if (category == CATEGORY.SPECIAL_ROLL)
+        categoryTitle.textContent = "Special Rolls";
+
+      for (let product of categoryProducts[category]) {
+        const productElement = document.createElement("product-card");
+        productElement.classList.add("menu-page__item");
+        productElement.dataset.title = product.name;
+        productElement.dataset.description = product.description;
+        productElement.dataset.src = product.imageUrl;
+        productElement.dataset.price = `$${product.price}`;
+        productElement.dataset.productId = product.id;
+        productElement.dataset.vegetarian = product.vegetarian;
+
+        items.appendChild(productElement);
+      }
+
+      fragment.appendChild(section);
     }
 
-    connectedCallback() {
-        this.init();    
-    }
+    content.appendChild(fragment);
 
-    async init() {
-        await this.loadHTML("/blocks/menuPage/menuPage.template");
-        const productsByCategory = await this.getProducts();
+    this.addTriggerLoader(categoryProducts)
+  }
 
-        this.renderProducts(productsByCategory);
-        this.applyButtonListeners();
-    }   
+  addTriggerLoader(category) {
+    const productContainer = this.shadowRoot.querySelector(".menu-page__content");
+    const loaderTemplate = this.shadowRoot.getElementById("loader-template");
+    if (loaderTemplate) {
+      const loaderClone = loaderTemplate.content.cloneNode(true);
+      const loaderTrigger = loaderClone.querySelector(".loader__trigger");
+      productContainer.appendChild(loaderTrigger);
 
-    async getProducts() {
-        const products = await productAPI.getProducts();
-      
-       ProductList.instance.setProducts(products);
-       const categoryProducts = ProductList.instance.groupByCategories();
-
-       return categoryProducts;
-    }
-
-    renderProducts(categoryProducts) {
-        const template = this.shadowRoot.getElementById('menu-page__category-section-id');
-        const fragment = new DocumentFragment();
-        const content = this.shadowRoot.querySelector(".menu-page__content");
-        content.innerHTML = "";
-
-        for(let category in categoryProducts) {
-
-            const section = template.content.cloneNode(true).firstElementChild;
-            const categoryTitle = section.querySelector(".menu-page__category-title-content");
-            const items = section.querySelector(".menu-page__category__items");
-
-            if(category == CATEGORY.MAKI)
-                categoryTitle.textContent = "Maki";
-
-            else if(category == CATEGORY.URAMAKI)
-                categoryTitle.textContent = "Uramaki";
-
-            else if(category == CATEGORY.SPECIAL_ROLL)
-                categoryTitle.textContent = "Special Rolls";
-
-
-            for(let product of categoryProducts[category]) {
-                const productElement = document.createElement("product-card");
-                productElement.classList.add("menu-page__item");
-                productElement.dataset.title = product.name;
-                productElement.dataset.description = product.description;
-                productElement.dataset.src = product.imageUrl;
-                productElement.dataset.price = `$${product.price}`;
-                productElement.dataset.productId = product.id;
-                productElement.dataset.vegetarian = product.vegetarian;
-
-                items.appendChild(productElement);
-            }
-
-            fragment.appendChild(section);
-        }
-
-       content.appendChild(fragment);
-
-    }
-
-
-
-    applyButtonListeners() {
-        const buttons = this.shadowRoot.querySelector(".menu-page__navbar");
-        const allButton = this.shadowRoot.getElementById('all-button');
-
-        buttons.addEventListener("click", (event) => {
-
-            if(!event.target.parentElement.matches('button-custom'))
-                return;
-
-            const categoryId = event.target.parentElement.dataset.categoryId;
-            const filteredCategoryProducts = ProductList.instance.groupByCategories();
-
-            if(categoryId == CATEGORY.ALL){
-                this.renderProducts(filteredCategoryProducts);
-            }
-            else {
-
-                const filteredObject = {
-                    [categoryId]: filteredCategoryProducts[categoryId]
-                };
-
-                this.renderProducts(filteredObject);
-            }
-           
+      this.observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.loadMore(category);
+          }
         });
+      }, {
+        threshold: 0.1
+      });
+
+      this.observer.observe(loaderTrigger);
     }
+    else {
+      console.warn("Loader template not found.");
+    }
+  }
 
+  applyButtonListeners() {
+    const buttons = this.shadowRoot.querySelector(".menu-page__navbar");
+    const allButton = this.shadowRoot.getElementById("all-button");
 
-    
-    
+    buttons.addEventListener("click", (event) => {
+      if (!event.target.parentElement.matches("button-custom")) return;
+
+      const categoryId = event.target.parentElement.dataset.categoryId;
+      const filteredCategoryProducts = ProductList.instance.groupByCategories();
+
+      if (categoryId == CATEGORY.ALL) {
+        this.renderProducts(filteredCategoryProducts);
+      } else {
+        const filteredObject = {
+          [categoryId]: filteredCategoryProducts[categoryId],
+        };
+
+        this.renderProducts(filteredObject);
+      }
+    });
+  }
+
+  async loadMore(category) {
+    this.renderProducts(category);
+    const loaderElement = this.shadowRoot.querySelector(".loader__trigger");
+    if (loaderElement) {
+      this.observer.unobserve(loaderElement);
+    }
+    const productContainer = this.shadowRoot.querySelector(".menu-page__content");
+    const previousLoader = productContainer.querySelector(".loader__trigger");
+    if (previousLoader) {
+      previousLoader.remove();
+    }
+  }
 }
-
 
 customElements.define("menu-page", MenuPage);
 export default MenuPage;
