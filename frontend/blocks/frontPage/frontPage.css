@@ -60,7 +60,6 @@
     .front-page__item {
         width: 100%;
         min-height: fit-content;
-        /* height: 200px; Ajustar según sea necesario */
     }
 
     .front-page__item-button {

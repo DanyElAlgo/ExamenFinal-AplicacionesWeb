@@ -99,7 +99,7 @@ class BlogPage extends BaseHTMLElement {
                 return;
 
             IMAGE_PAGES.BLOG_DETAIL_PAGE.url = card.dataset.img;
-            IMAGE_PAGES.BLOG_DETAIL_PAGE.width = '963px';
+            IMAGE_PAGES.BLOG_DETAIL_PAGE.width = '55%';
         
             globalThis.app.router.go(`/blog/${card.dataset.id}`);
         })

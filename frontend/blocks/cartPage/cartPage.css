@@ -4,12 +4,6 @@
     padding: 0;
 }
 
-/* 
-:host {
-    width: 100%;
-    display: block;
-} */
-
 .cart-page {
     display: flex;
     flex-direction: column;
@@ -108,4 +102,10 @@
     border-bottom: 1px dashed rgba(239, 231, 210, 0.15);
     align-self: flex-end;
     margin-bottom: 4px;
+}
+
+@media screen and (max-width: 1024px) {
+    .cart-page__total-skeleton{
+        display: none;
+    }
 }

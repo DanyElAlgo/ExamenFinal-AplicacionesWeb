@@ -22,7 +22,7 @@ import layout from "./services/Layout.js";
 
 globalThis.app = {};
 
-app.isAuthenticated = true;
+app.isAuthenticated = false;
 app.userId = 1;
 app.router = router;
 

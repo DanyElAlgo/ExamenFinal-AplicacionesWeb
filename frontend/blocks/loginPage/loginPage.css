@@ -10,7 +10,6 @@
     gap: 1.3125rem;
     align-items: center;
     padding: 5rem 6rem;
-    height: 87vh;
     border-radius: 16px;
     border: 1px solid rgba(239, 231, 210, 0.15);
 }
@@ -100,4 +99,10 @@
     font-size: 14px;
     font-weight: 400;
     color: rgba(169, 125, 92, 1);
+}
+
+@media screen and (max-width: 1024px) {
+    .login-page {
+        padding: 3rem;
+    }
 }

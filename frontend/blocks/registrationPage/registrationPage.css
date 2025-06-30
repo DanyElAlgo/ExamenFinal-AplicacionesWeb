@@ -118,3 +118,12 @@
 .registration-page__form-error {
     text-align: center;
 }
+
+@media screen and (max-width: 1024px) {
+    .registration-page {
+        padding: 3rem;
+    }
+    .registration-page__title-content{
+        font-size: 30px;
+    }
+}

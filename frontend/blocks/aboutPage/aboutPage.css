@@ -61,7 +61,6 @@
     height: 377.5px;
     border-radius: 1rem;
     overflow: hidden;
-    flex-shrink: 0;
 }
 
 .about-page__main-img, .about-page__history-img {
@@ -146,4 +145,186 @@
     width: 20px;
     height: 1px;
     background-color: rgba(239, 231, 210, 0.15);
+}
+
+@media screen and (max-width: 1024px) {
+    :host {
+        width: 100%;
+    }
+
+    .about-page {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .about-page__main, 
+    .about-page__history {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .about-page__main-card, 
+    .about-page__history-card {
+        padding: 2.5rem 2rem;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .about-page__main-img-wrapper, 
+    .about-page__history-img-wrapper {
+        width: 100%;
+        max-width: 600px;
+        height: 300px;
+    }
+
+    .about-page__main-img, 
+    .about-page__history-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .about-page__main-card-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .about-page__history-card-title {
+        font-size: 22px;
+        justify-content: center;
+    }
+
+    .about-page__main-card-content, 
+    .about-page__history-card-content {
+        font-size: 15px;
+        line-height: 170%;
+        text-align: center;
+    }
+
+    .about-page__awards {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .about-page__award-card {
+        padding: 2rem 1.5rem;
+        width: 100%;
+    }
+
+    .about-page__award-title {
+        font-size: 22px;
+    }
+
+    .about-page__award-description {
+        font-size: 11px;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :host {
+        width: 100%;
+    }
+
+    .about-page {
+        gap: 1rem;
+        padding: 0 0.75rem;
+    }
+
+    .about-page__main, 
+    .about-page__history {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .about-page__main-card, 
+    .about-page__history-card {
+        padding: 1.5rem 1rem;
+        width: 100%;
+        max-width: none;
+        border-radius: 12px;
+    }
+
+    .about-page__main-img-wrapper, 
+    .about-page__history-img-wrapper {
+        width: 100%;
+        height: 220px;
+        border-radius: 12px;
+    }
+
+    .about-page__main-img, 
+    .about-page__history-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .about-page__main-card-title {
+        font-size: 24px;
+        text-align: center;
+        line-height: 130%;
+    }
+
+    .about-page__history-card-title {
+        font-size: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .about-page__main-card-content, 
+    .about-page__history-card-content {
+        font-size: 14px;
+        line-height: 160%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .about-page__awards {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .about-page__award-card {
+        padding: 1.5rem 1rem;
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .about-page__award-title {
+        font-size: 20px;
+        line-height: 120%;
+    }
+
+    .about-page__award-description {
+        font-size: 10px;
+        width: 95%;
+        line-height: 140%;
+        letter-spacing: 0.5px;
+    }
+
+    .about-page__award-stars {
+        gap: 0.125rem;
+    }
+
+    .about-page__content {
+        gap: 0.375rem;
+    }
+
+    .about-page__history-card-logo {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .about-page__diamond-icon {
+        width: 10px;
+        height: 10px;
+    }
+
+    .about-page__line {
+        width: 15px;
+    }
 }

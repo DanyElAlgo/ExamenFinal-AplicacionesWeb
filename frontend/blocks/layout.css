@@ -16,7 +16,7 @@
 .layout-page__menu {
     position: absolute;
     left: 41px;
-    top: 41px;
+    top: 2.8rem;
 }
 
 .layout-page__image-wrapper {
@@ -28,8 +28,7 @@
     background-position: center center;
     height: var(--image--height);
     width: var(--image-width);
-    /* flex-basis: var(--image-width); En lugar de width */
-    flex-shrink: 0; /* Evita que se encoja */
+    flex-shrink: 0;
     background-image: var(--image-url);
 
 
@@ -38,17 +37,32 @@
 
     min-width: 0;
 }
+.layout-page__image-wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0; top: 50%; right: 0; bottom: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,1) 100%
+    );
+    z-index: 1;
+}
 
 .layout-page__title {
     font-family: "Forum", sans-serif;
     font-size: 140px;
     color: #EFE7D2;
-    max-width: 53rem;
+    max-width: 85%;
     left: 60px;
     bottom: 52px;
     position: absolute;
     text-transform: uppercase;
     overflow-wrap: break-word;
+    hyphens: auto;
+    z-index: 2;
 }
 
 .layout-page__account {
@@ -95,6 +109,7 @@
     background-color: #0A0B0A;
     padding: 1.5rem 1rem 1rem 1.5rem;
     border-top-left-radius: 30px 30px;
+    z-index: 2;
 }
 
 
@@ -140,6 +155,7 @@
     padding: 4.17px;
     border-radius: 100%;
     cursor: pointer;
+    z-index: 2;
 }
 
 .layout-page__add-button:hover .layout-page__add-icon-fill {
@@ -164,6 +180,8 @@
     border: 1px solid rgba(239, 231, 210, 0.15);
     padding: 1.25rem 1.25rem 1.25rem 1.5rem;
     border-radius: 16px;
+    position: sticky;
+    top: 95vh;
 }
 
 .layout-page__footer-copyright {
@@ -185,9 +203,11 @@
     .layout-page {
         gap: 0.75rem;
     }
+    .layout-page__menu{
+        top: 1.65rem;
+    }
 }
 
-/* Mobile */
 @media screen and (max-width: 768px) {
     .layout-page {
         flex-direction: column;
@@ -227,12 +247,11 @@
     .layout-page__socials{
         flex-direction: column;
     }
+    .layout-page__add-button{
+        bottom: 2rem;
+        right: 2rem;
+    }
 }
-
-/* .layout-page__content-main {
-    flex: 1;
-} */
-
 
 .layout-page__content::-webkit-scrollbar {
     width: 5px;
@@ -245,4 +264,33 @@
 .layout-page__content::-webkit-scrollbar-thumb {
     background: rgba(239, 231, 210, 0.3);
     border-radius: 4px;
+}
+
+@media screen and (max-width: 1024px) {
+    .layout-page__account {
+        gap: 1rem;
+        top: 2rem;
+        right: 2rem;
+    }
+    .layout-page__account-icon {
+        padding: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .layout-page__account {
+        gap: 0.5rem;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+    .layout-page__account-icon,
+    .layout-page__account-icon--cart {
+        padding: 0.5rem;
+        border-radius: 8px;
+    }
+    .layout-page__icon-person,
+    .layout-page__icon-cart {
+        width: 20px;
+        height: 20px;
+    }
 }
