@@ -1,0 +1,129 @@
+.reservation-page {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 5rem 6rem;
+    border-radius: 16px;
+    border: 1px solid rgba(239, 231, 210, 0.15);
+}
+
+
+.reservation-page__header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+.reservation-page__subtitle {
+    font-family: var(--font-satoshi-light);
+    font-size: 18px;
+    line-height: 150%;
+    word-wrap: break-word;
+    color: rgba(239, 231, 210, 1);
+    max-width: 70%;
+    text-align: center;
+}
+
+
+.reservation-page__title {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.reservation-page__logo {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+}
+
+.reservation-page__title-content {
+    font-family: "Forum", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: rgba(239, 231, 210, 1);
+    text-transform: uppercase;
+}
+
+.reservation-page__logo-line {
+    width: 50px;
+    height: 1px;
+    background-color: rgba(239, 231, 210, 0.15);
+}
+
+.reservation-page__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.reservation-page__form-without-session {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.reservation-page__form-with-session {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.reservation-page__group-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.reservation-page__group-form--horizontal {
+    flex: 1;
+}
+
+.reservation-page__input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-color: rgba(24, 24, 24, 0.5);
+    border: 1px solid rgba(239, 231, 210, 0.15);
+    border-radius: 10px;
+    font-size: 16px;
+    color: rgba(239, 231, 210, 1);
+}
+
+
+.reservation-page__input--error {
+    border: 1px solid rgba(169, 125, 92, 1);
+}
+
+
+.reservation-page__input::placeholder {
+    font-family: var(--font-satoshi-light);
+    font-size: 16px;
+    font-weight: 200;
+    color: rgba(239, 231, 210, 0.7);
+}
+
+.reservation-page__input--error::placeholder {
+    color: rgba(169, 125, 92, 1);
+}
+
+.reservation-page__input-content-error {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(169, 125, 92, 1);
+}
+
+.reservation-page__form-error {
+    text-align: center;
+}
+
+.reservation-page__button {
+    width: 100%
+}

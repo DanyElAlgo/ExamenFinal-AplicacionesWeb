@@ -1,0 +1,96 @@
+.login-page {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3125rem;
+    align-items: center;
+    padding: 5rem 6rem;
+    height: 87vh;
+    border-radius: 16px;
+    border: 1px solid rgba(239, 231, 210, 0.15);
+}
+
+.login-page__title {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.login-page__logo {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+}
+
+.login-page__title-content {
+    font-family: "Forum", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: rgba(239, 231, 210, 1);
+    text-transform: uppercase;
+}
+
+.login-page__logo-line {
+    width: 50px;
+    height: 1px;
+    background-color: rgba(239, 231, 210, 0.15);
+}
+
+.login-page__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3125rem;
+    align-items: center;
+    width: 85%;
+}
+
+.login-page__group-form {
+    width: 100%;
+}
+
+.login-page__input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-color: rgba(24, 24, 24, 0.5);
+    border: 1px solid rgba(239, 231, 210, 0.15);
+    border-radius: 10px;
+    font-size: 16px;
+    color: rgba(239, 231, 210, 1);
+    margin-bottom: 10px;
+}
+
+
+.login-page__input--error {
+    border: 1px solid rgba(169, 125, 92, 1);
+}
+
+.login-page__input::placeholder {
+    font-family: var(--font-satoshi-light);
+    font-size: 16px;
+    font-weight: 200;
+    color: rgba(239, 231, 210, 0.7);
+}
+
+.login-page__input--error::placeholder {
+    color: rgba(169, 125, 92, 1);
+}
+
+.login-page__button {
+    width: 100%
+}
+
+.login-page__link {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: underline;
+    color: rgba(239, 231, 210, 1);
+    cursor: pointer;
+}
+
+.login-page__input-error {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(169, 125, 92, 1);
+}

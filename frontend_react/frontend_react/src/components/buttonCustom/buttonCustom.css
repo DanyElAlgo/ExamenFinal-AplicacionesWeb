@@ -1,0 +1,26 @@
+@import url(/assets/fonts/satoshi/css/satoshi.css);
+
+.button {
+    padding: 0.5rem 1.5rem;
+    background-color: rgba(24, 24, 24, 0.5);
+    font-family: "Satoshi-Regular", sans-serif;
+    font-size: 0.75rem;
+    color: #EFE7D2;
+    border: 2px solid rgba(239, 231, 210, 0.15);
+    font-weight: 400;
+    border-radius: 8px;
+    text-transform: uppercase;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button:focus {
+    background-color: rgba(239, 231, 210, 1);
+    color: rgba(24, 24, 24, 1);
+    font-family: "Forum", sans-serif;
+    font-weight: 400;
+}
+
+.button:hover {
+    border-color: rgba(239, 231, 210, 1);
+}

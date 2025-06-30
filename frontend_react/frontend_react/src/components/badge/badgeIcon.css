@@ -1,0 +1,20 @@
+.badge {
+    padding: 6px 6px;
+    border: 2px solid rgba(239, 231, 210, 0.15);
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: rgba(24, 24, 24, 0.5);
+    cursor: pointer;
+}
+
+.badge:hover {
+    background-color: #EFE7D2;
+}
+
+.badge:hover .badge__icon {
+    filter: invert(1);
+}

@@ -1,0 +1,288 @@
+{ "products": [
+        {
+            "id": 1,
+            "name": "Spicy Tuna Maki 1",
+            "description": "A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.",
+            "price": 5.00,
+            "imageUrl": "/assets/img/product1.png",
+            "vegetarian": true,
+            "ingredients": [
+                "spicy tuna",
+                "cucumber",
+                "avocado",
+                "nori",
+                "seasoned rice"
+            ],
+            "available": true,
+            "category": "Maki",
+            "categoryId": 1,
+            "calories": 210
+        },
+        {
+            "id": 2,
+            "name": "Spicy Tuna Maki 2",
+            "description": "A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.",
+            "price": 5.00,
+            "imageUrl": "/assets/img/product1.png",
+            "vegetarian": true,
+            "ingredients": [
+                "spicy tuna",
+                "cucumber",
+                "avocado",
+                "nori",
+                "seasoned rice"
+            ],
+            "available": true,
+            "category": "Maki",
+            "categoryId": 1,
+            "calories": 210
+        },
+        {
+            "id": 3,
+            "name": "Spicy Tuna Maki 3",
+            "description": "A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.",
+            "price": 5.00,
+            "imageUrl": "/assets/img/product1.png",
+            "vegetarian": true,
+            "ingredients": [
+                "spicy tuna",
+                "cucumber",
+                "avocado",
+                "nori",
+                "seasoned rice"
+            ],
+            "available": true,
+            "category": "Maki",
+            "categoryId": 1,
+            "calories": 210
+        },
+        {
+            "id": 4,
+            "name": "Spicy Tuna Maki 4",
+            "description": "A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.",
+            "price": 5.00,
+            "imageUrl": "/assets/img/product1.png",
+            "vegetarian": false,
+            "ingredients": [
+                "spicy tuna",
+                "cucumber",
+                "avocado",
+                "nori",
+                "seasoned rice"
+            ],
+            "available": true,
+            "category": "Maki",
+            "categoryId": 1,
+            "calories": 210
+        },
+        {
+            "id": 5,
+            "name": "Spicy Tuna Maki 5",
+            "description": "A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.",
+            "price": 5.00,
+            "imageUrl": "/assets/img/product1.png",
+            "vegetarian": false,
+            "ingredients": [
+                "spicy tuna",
+                "cucumber",
+                "avocado",
+                "nori",
+                "seasoned rice"
+            ],
+            "available": true,
+            "category": "Maki",
+            "categoryId": 1,
+            "calories": 210
+        },
+        {
+            "id": 6,
+            "name": "Spicy Tuna Maki 6",
+            "description": "A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.",
+            "price": 5.00,
+            "imageUrl": "/assets/img/product1.png",
+            "vegetarian": false,
+            "ingredients": [
+                "spicy tuna",
+                "cucumber",
+                "avocado",
+                "nori",
+                "seasoned rice"
+            ],
+            "available": true,
+            "category": "Uramaki",
+            "categoryId": 2,
+            "calories": 210
+        },
+        {
+            "id": 7,
+            "name": "Spicy Tuna Maki 7",
+            "description": "A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.",
+            "price": 5.00,
+            "imageUrl": "/assets/img/product1.png",
+            "vegetarian": false,
+            "ingredients": [
+                "spicy tuna",
+                "cucumber",
+                "avocado",
+                "nori",
+                "seasoned rice"
+            ],
+            "available": true,
+            "category": "Uramaki",
+            "categoryId": 2,
+            "calories": 210
+        },
+        {
+            "id": 8,
+            "name": "Spicy Tuna Maki 8",
+            "description": "A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.",
+            "price": 5.00,
+            "imageUrl": "/assets/img/product1.png",
+            "vegetarian": false,
+            "ingredients": [
+                "spicy tuna",
+                "cucumber",
+                "avocado",
+                "nori",
+                "seasoned rice"
+            ],
+            "available": true,
+            "category": "Uramaki",
+            "categoryId": 2,
+            "calories": 210
+        },
+        {
+            "id": 9,
+            "name": "Spicy Tuna Maki 9",
+            "description": "A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.",
+            "price": 5.00,
+            "imageUrl": "/assets/img/product1.png",
+            "vegetarian": false,
+            "ingredients": [
+                "spicy tuna",
+                "cucumber",
+                "avocado",
+                "nori",
+                "seasoned rice"
+            ],
+            "available": true,
+            "category": "Uramaki",
+            "categoryId": 2,
+            "calories": 210
+        },
+        {
+            "id": 10,
+            "name": "Spicy Tuna Maki 10",
+            "description": "A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.",
+            "price": 5.00,
+            "imageUrl": "/assets/img/product1.png",
+            "vegetarian": false,
+            "ingredients": [
+                "spicy tuna",
+                "cucumber",
+                "avocado",
+                "nori",
+                "seasoned rice"
+            ],
+            "available": true,
+            "category": "Uramaki",
+            "categoryId": 2,
+            "calories": 210
+        },
+        {
+            "id": 11,
+            "name": "Spicy Tuna Maki 11",
+            "description": "A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.",
+            "price": 5.00,
+            "imageUrl": "/assets/img/product1.png",
+            "vegetarian": false,
+            "ingredients": [
+                "spicy tuna",
+                "cucumber",
+                "avocado",
+                "nori",
+                "seasoned rice"
+            ],
+            "available": true,
+            "category": "Special Roll",
+            "categoryId": 3,
+            "calories": 210
+        },
+        {
+            "id": 12,
+            "name": "Spicy Tuna Maki 12",
+            "description": "A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.",
+            "price": 5.00,
+            "imageUrl": "/assets/img/product1.png",
+            "vegetarian": false,
+            "ingredients": [
+                "spicy tuna",
+                "cucumber",
+                "avocado",
+                "nori",
+                "seasoned rice"
+            ],
+            "available": true,
+            "category": "Special Roll",
+            "categoryId": 3,
+            "calories": 210
+        },
+        {
+            "id": 13,
+            "name": "Spicy Tuna Maki 13",
+            "description": "A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.",
+            "price": 5.00,
+            "imageUrl": "/assets/img/product1.png",
+            "vegetarian": false,
+            "ingredients": [
+                "spicy tuna",
+                "cucumber",
+                "avocado",
+                "nori",
+                "seasoned rice"
+            ],
+            "available": true,
+            "category": "Special Roll",
+            "categoryId": 3,
+            "calories": 210
+        },
+        {
+            "id": 14,
+            "name": "Spicy Tuna Maki 14",
+            "description": "A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.",
+            "price": 5.00,
+            "imageUrl": "/assets/img/product1.png",
+            "vegetarian": false,
+            "ingredients": [
+                "spicy tuna",
+                "cucumber",
+                "avocado",
+                "nori",
+                "seasoned rice"
+            ],
+            "available": true,
+            "category": "Special Roll",
+            "categoryId": 3,
+            "calories": 210
+        },
+        {
+            "id": 15,
+            "name": "Spicy Tuna Maki 15",
+            "description": "A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.",
+            "price": 5.00,
+            "imageUrl": "/assets/img/product1.png",
+            "vegetarian": false,
+            "ingredients": [
+                "spicy tuna",
+                "cucumber",
+                "avocado",
+                "nori",
+                "seasoned rice"
+            ],
+            "available": true,
+            "category": "Special Roll",
+            "categoryId": 3,
+            "calories": 210
+        }
+    ]
+}

@@ -1,0 +1,81 @@
+.blog-page {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 5rem 6rem;
+    border-radius: 16px;
+    border: 1px solid rgba(239, 231, 210, 0.15);
+}
+
+
+.blog-page__title {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-page__logo {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+}
+
+.blog-page__title-content {
+    font-family: "Forum", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: rgba(239, 231, 210, 1);
+    text-transform: uppercase;
+    text-align: center;
+    width: 50%;
+}
+
+.blog-page__logo-line {
+    width: 50px;
+    height: 1px;
+    background-color: rgba(239, 231, 210, 0.15);
+}
+
+.blog-page__nav {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.blog-page__nav-item {
+    color: rgba(239, 231, 210, 1);
+    font-family: "Forum", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+
+.blog-page__nav-item:hover {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: rgba(239, 231, 210, 1);
+    text-underline-offset: 5px;
+}
+
+.blog-page__nav-item:focus {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: rgba(239, 231, 210, 1);
+    text-underline-offset: 5px;
+}
+
+.blog-page__blogs {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.blog-page__card--clickeable {
+    cursor: pointer;
+}
